@@ -1,0 +1,12 @@
+C:\dev\Mobile.Automation\Mobile.Automation.ScreenObjects\bin\Debug\Mobile.Automation.ScreenObjects.dll
+C:\dev\Mobile.Automation\Mobile.Automation.ScreenObjects\bin\Debug\Mobile.Automation.ScreenObjects.pdb
+C:\dev\Mobile.Automation\Mobile.Automation.ScreenObjects\bin\Debug\Xamarin.UITest.dll
+C:\dev\Mobile.Automation\Mobile.Automation.ScreenObjects\bin\Debug\Xamarin.UITest.xml
+C:\dev\Mobile.Automation\Mobile.Automation.ScreenObjects\obj\Debug\Mobile.Automation.ScreenObjects.csproj.CoreCompileInputs.cache
+C:\dev\Mobile.Automation\Mobile.Automation.ScreenObjects\obj\Debug\Mobile.Automation.ScreenObjects.dll
+C:\dev\Mobile.Automation\Mobile.Automation.ScreenObjects\obj\Debug\Mobile.Automation.ScreenObjects.pdb
+C:\dev\Mobile.Automation\src\Mobile.Automation.ScreenObjects\bin\Debug\Mobile.Automation.ScreenObjects.dll
+C:\dev\Mobile.Automation\src\Mobile.Automation.ScreenObjects\bin\Debug\Mobile.Automation.ScreenObjects.pdb
+C:\dev\Mobile.Automation\src\Mobile.Automation.ScreenObjects\obj\Debug\Mobile.Automation.ScreenObjects.csproj.CoreCompileInputs.cache
+C:\dev\Mobile.Automation\src\Mobile.Automation.ScreenObjects\obj\Debug\Mobile.Automation.ScreenObjects.dll
+C:\dev\Mobile.Automation\src\Mobile.Automation.ScreenObjects\obj\Debug\Mobile.Automation.ScreenObjects.pdb

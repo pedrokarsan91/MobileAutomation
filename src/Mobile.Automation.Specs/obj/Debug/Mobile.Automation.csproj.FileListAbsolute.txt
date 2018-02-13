@@ -1,0 +1,10 @@
+C:\dev\Mobile.Automation\Mobile.Automation\bin\Debug\Binaries\Instagram_com.instagram.android.apk
+C:\dev\Mobile.Automation\Mobile.Automation\bin\Debug\Mobile.Automation.dll
+C:\dev\Mobile.Automation\Mobile.Automation\bin\Debug\Mobile.Automation.pdb
+C:\dev\Mobile.Automation\Mobile.Automation\bin\Debug\nunit.framework.dll
+C:\dev\Mobile.Automation\Mobile.Automation\bin\Debug\Xamarin.UITest.dll
+C:\dev\Mobile.Automation\Mobile.Automation\bin\Debug\nunit.framework.xml
+C:\dev\Mobile.Automation\Mobile.Automation\bin\Debug\Xamarin.UITest.xml
+C:\dev\Mobile.Automation\Mobile.Automation\obj\Debug\Mobile.Automation.csproj.CoreCompileInputs.cache
+C:\dev\Mobile.Automation\Mobile.Automation\obj\Debug\Mobile.Automation.dll
+C:\dev\Mobile.Automation\Mobile.Automation\obj\Debug\Mobile.Automation.pdb
