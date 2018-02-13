@@ -22,5 +22,15 @@ namespace Mobile.Automation.ScreenObjects.Base
                 return false;
             }
         }
+
+        public void SwipeLeft(int numberOfTimes)
+        {
+            var startNumber = 0;
+            while (startNumber < numberOfTimes)
+            {
+                AppManager.App.SwipeRightToLeft();
+                startNumber++;
+            }
+        }
     }
 }

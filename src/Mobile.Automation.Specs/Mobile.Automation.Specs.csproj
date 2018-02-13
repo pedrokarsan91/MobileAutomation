@@ -49,6 +49,7 @@
       <DependentUpon>Onboarding.feature</DependentUpon>
     </Compile>
     <Compile Include="Hooks\BeforeAfterScenario.cs" />
+    <Compile Include="StepDefinitions\CommonSteps.cs" />
     <Compile Include="StepDefinitions\OnboardingSteps.cs" />
   </ItemGroup>
   <ItemGroup>
