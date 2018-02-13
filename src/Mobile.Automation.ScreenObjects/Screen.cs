@@ -10,19 +10,9 @@ namespace Mobile.Automation.ScreenObjects
             return screen;
         }
 
-        public static LandingScreen LandingScreen
+        public static OnboardingScreen OnboardingScreen
         {
-            get { return GetScreen<LandingScreen>(); }
-        }
-
-        public static LoginScreen LoginScreen
-        {
-            get { return GetScreen<LoginScreen>(); }
-        }
-
-        public static FeedScreen FeedScreen
-        {
-            get { return GetScreen<FeedScreen>(); }
+            get { return GetScreen<OnboardingScreen>(); }
         }
     }
 }

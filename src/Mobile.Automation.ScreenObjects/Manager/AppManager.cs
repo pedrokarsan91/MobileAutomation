@@ -17,7 +17,7 @@ namespace Mobile.Automation.ScreenObjects.Manager
         {
             _app = ConfigureApp
                 .Android
-                .ApkFile("C:/dev/Mobile.Automation/src/Mobile.Automation.Specs/bin/Debug/Binaries/Instagram_com.instagram.android.apk")
+                .ApkFile("C:/dev/MobileAutomation/src/Mobile.Automation.Specs/bin/Debug/Binaries/UKTV Play.apk")
                 .StartApp();
 
             return _app;

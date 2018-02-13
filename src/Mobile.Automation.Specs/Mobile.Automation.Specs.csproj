@@ -43,23 +43,22 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Features\Login.feature.cs">
+    <Compile Include="Features\Onboarding.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Login.feature</DependentUpon>
+      <DependentUpon>Onboarding.feature</DependentUpon>
     </Compile>
     <Compile Include="Hooks\BeforeAfterScenario.cs" />
-    <Compile Include="StepDefinitions\CustomTransform.cs" />
-    <Compile Include="StepDefinitions\LoginSteps.cs" />
+    <Compile Include="StepDefinitions\OnboardingSteps.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="Binaries\Instagram_com.instagram.android.apk">
+    <None Include="Binaries\UKTV Play.apk">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="Features\Login.feature">
+    <None Include="Features\Onboarding.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>Login.feature.cs</LastGenOutput>
+      <LastGenOutput>Onboarding.feature.cs</LastGenOutput>
     </None>
     <None Include="packages.config" />
   </ItemGroup>

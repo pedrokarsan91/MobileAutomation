@@ -10,3 +10,9 @@ C:\dev\Mobile.Automation\src\Mobile.Automation.ScreenObjects\bin\Debug\Mobile.Au
 C:\dev\Mobile.Automation\src\Mobile.Automation.ScreenObjects\obj\Debug\Mobile.Automation.ScreenObjects.csproj.CoreCompileInputs.cache
 C:\dev\Mobile.Automation\src\Mobile.Automation.ScreenObjects\obj\Debug\Mobile.Automation.ScreenObjects.dll
 C:\dev\Mobile.Automation\src\Mobile.Automation.ScreenObjects\obj\Debug\Mobile.Automation.ScreenObjects.pdb
+C:\dev\MobileAutomation\src\Mobile.Automation.ScreenObjects\bin\Debug\Mobile.Automation.ScreenObjects.dll
+C:\dev\MobileAutomation\src\Mobile.Automation.ScreenObjects\bin\Debug\Mobile.Automation.ScreenObjects.pdb
+C:\dev\MobileAutomation\src\Mobile.Automation.ScreenObjects\obj\Debug\Mobile.Automation.ScreenObjects.csprojResolveAssemblyReference.cache
+C:\dev\MobileAutomation\src\Mobile.Automation.ScreenObjects\obj\Debug\Mobile.Automation.ScreenObjects.csproj.CoreCompileInputs.cache
+C:\dev\MobileAutomation\src\Mobile.Automation.ScreenObjects\obj\Debug\Mobile.Automation.ScreenObjects.dll
+C:\dev\MobileAutomation\src\Mobile.Automation.ScreenObjects\obj\Debug\Mobile.Automation.ScreenObjects.pdb
