@@ -1,0 +1,11 @@
+# MobileAutomation
+- Clone repository on to C:/dev folder on your machine
+- Install Visual Studio Community with Xamarin
+- Open Visual Studio
+- Tool/Extentions and Updates
+- Install NUnit Test 3 Adapter
+- Install Specflow
+- Open solution file
+- Clean/Rebuild solution
+- Plug Android phone
+- Run test
