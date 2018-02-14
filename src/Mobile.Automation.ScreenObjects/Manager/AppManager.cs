@@ -1,5 +1,4 @@
 ﻿using System;
-using System.IO;
 using Xamarin.UITest;
 using Xamarin.UITest.Configuration;
 
@@ -44,13 +43,6 @@ namespace Mobile.Automation.ScreenObjects.Manager
             }
 
             return _app;
-
-            //_app = ConfigureApp
-            //    .Android
-            //    .ApkFile("C:/dev/MobileAutomation/src/Mobile.Automation.Specs/bin/Debug/Binaries/UKTV Play.apk")
-            //    .StartApp();
-
-            //return _app;
         }
     }
 }
