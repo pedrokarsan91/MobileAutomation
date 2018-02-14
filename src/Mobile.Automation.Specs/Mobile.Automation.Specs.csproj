@@ -43,6 +43,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Base\FeatureBase.cs" />
+    <Compile Include="FeaturesExtender\OnboardingFeature.cs" />
     <Compile Include="Features\Onboarding.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
