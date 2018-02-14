@@ -1,5 +1,7 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using Xamarin.UITest;
+using Xamarin.UITest.Configuration;
 
 namespace Mobile.Automation.ScreenObjects.Manager
 {
@@ -15,12 +17,40 @@ namespace Mobile.Automation.ScreenObjects.Manager
 
         public static IApp StartApp()
         {
-            _app = ConfigureApp
-                .Android
-                .ApkFile("C:/dev/MobileAutomation/src/Mobile.Automation.Specs/bin/Debug/Binaries/UKTV Play.apk")
-                .StartApp();
+            switch (TestEnvironment.Platform)
+            {
+                case TestPlatform.Local:
+                    {
+                        if (Current.Platform == Platform.Android)
+                        {
+                            _app = ConfigureApp
+                                .Android
+                                .ApkFile("C:/dev/MobileAutomation/src/Mobile.Automation.Specs/bin/Debug/Binaries/UKTV Play.apk")
+                                .StartApp();
+                        }
+                        else if (Current.Platform == Platform.iOS)
+                        {
+                            _app = ConfigureApp
+                                .iOS
+                                .InstalledApp("com.uktv.play")
+                                .StartApp(AppDataMode.Clear);
+                        }
+                    }
+                    break;
+                default:
+                    {
+                        throw new ArgumentException("Unsupported platform");
+                    }
+            }
 
             return _app;
+
+            //_app = ConfigureApp
+            //    .Android
+            //    .ApkFile("C:/dev/MobileAutomation/src/Mobile.Automation.Specs/bin/Debug/Binaries/UKTV Play.apk")
+            //    .StartApp();
+
+            //return _app;
         }
     }
 }
