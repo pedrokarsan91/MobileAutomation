@@ -44,12 +44,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Base\OnboardingBaseScreen.cs" />
     <Compile Include="Base\ScreenBase.cs" />
     <Compile Include="Current.cs" />
     <Compile Include="Manager\AppManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Screen.cs" />
-    <Compile Include="Screens\OnboardingScreen.cs" />
+    <Compile Include="Screens\Onboarding\AndroidOnboardingScreen.cs" />
+    <Compile Include="Screens\Onboarding\AppleiOSOnboardingScreen.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

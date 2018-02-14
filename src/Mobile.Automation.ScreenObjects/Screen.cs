@@ -1,4 +1,6 @@
-﻿using Mobile.Automation.ScreenObjects.Screens;
+﻿using Mobile.Automation.ScreenObjects.Base;
+using Mobile.Automation.ScreenObjects.Screens.Onboarding;
+using Xamarin.UITest;
 
 namespace Mobile.Automation.ScreenObjects
 {
@@ -10,9 +12,19 @@ namespace Mobile.Automation.ScreenObjects
             return screen;
         }
 
-        public static OnboardingScreen OnboardingScreen
+        public static OnboardingBaseScreen OnboardingScreen
         {
-            get { return GetScreen<OnboardingScreen>(); }
+            get
+            {
+                if (Current.Platform == Platform.Android)
+                {
+                    return GetScreen<AndroidOnboardingScreen>();
+                }
+                else
+                {
+                    return GetScreen<AppleiOSOnboardingScreen>();
+                }
+            }
         }
     }
 }
