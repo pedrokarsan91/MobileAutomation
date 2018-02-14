@@ -35,6 +35,7 @@ C:\dev\MobileAutomation\src\Mobile.Automation.Specs\bin\Debug\Mobile.Automation.
 C:\dev\MobileAutomation\src\Mobile.Automation.Specs\bin\Debug\Mobile.Automation.Specs.pdb
 C:\dev\MobileAutomation\src\Mobile.Automation.Specs\bin\Debug\Mobile.Automation.ScreenObjects.dll
 C:\dev\MobileAutomation\src\Mobile.Automation.Specs\bin\Debug\nunit.framework.dll
+C:\dev\MobileAutomation\src\Mobile.Automation.Specs\bin\Debug\TechTalk.SpecFlow.dll
 C:\dev\MobileAutomation\src\Mobile.Automation.Specs\bin\Debug\Mobile.Automation.ScreenObjects.pdb
 C:\dev\MobileAutomation\src\Mobile.Automation.Specs\bin\Debug\nunit.framework.xml
 C:\dev\MobileAutomation\src\Mobile.Automation.Specs\obj\Debug\Mobile.Automation.Specs.csprojResolveAssemblyReference.cache

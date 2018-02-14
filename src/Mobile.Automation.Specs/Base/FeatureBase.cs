@@ -8,13 +8,13 @@ namespace Mobile.Automation.Specs.Base
     [TestFixture(Platform.iOS)]
     public class FeatureBase
     {
-        private readonly Platform _platform;
-
         [SetUp]
-        public void Setup()
+        public void SetUp()
         {
             Current.Platform = _platform;
         }
+
+        private readonly Platform _platform;
 
         public FeatureBase(Platform platform)
         {
