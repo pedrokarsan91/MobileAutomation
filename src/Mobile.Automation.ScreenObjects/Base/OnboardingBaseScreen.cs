@@ -52,8 +52,7 @@ namespace Mobile.Automation.ScreenObjects.Base
 
         public virtual bool IsSubTextExist(string subText)
         {
-            Func<AppQuery, AppQuery> text = x => x.Text(subText);
-            return IsElementExist(text);
+            return IsElementExist(x => x.Text(subText));
         }
 
         public virtual bool IsUktvLogoExist()
