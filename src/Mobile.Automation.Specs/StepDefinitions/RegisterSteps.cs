@@ -24,5 +24,11 @@ namespace Mobile.Automation.Specs.StepDefinitions
         {
             Screen.SignInScreen.NavigateToRegisterNow();
         }
+
+        [Given(@"I navigate to register from episode")]
+        public void GivenINavigateToRegisterFromEpisode()
+        {
+            Screen.EpisodeScreen.NavigateToRegister();
+        }
     }
 }

@@ -25,5 +25,11 @@ namespace Mobile.Automation.Specs.StepDefinitions
             Screen.HomeScreen.GoToProfile();
         }
 
+        [Given(@"I navigate to ""(.*)"" from burger menu")]
+        public void GivenINavigateToFromBurgerMenu(string burgerMenuItem)
+        {
+            Screen.HomeScreen.OpenBurgerMenu();
+            Screen.HomeScreen.SelectBurgerMenuOption(burgerMenuItem);
+        }
     }
 }

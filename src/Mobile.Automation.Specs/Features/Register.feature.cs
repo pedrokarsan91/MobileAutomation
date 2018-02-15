@@ -170,6 +170,82 @@ this.ScenarioSetup(scenarioInfo);
 #line hidden
             this.ScenarioCleanup();
         }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Register From Episode")]
+        public virtual void RegisterFromEpisode()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Register From Episode", ((string[])(null)));
+#line 33
+this.ScenarioSetup(scenarioInfo);
+#line 34
+ testRunner.Given("I am on the onboarding screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 35
+  testRunner.And("I skip the registration", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 36
+  testRunner.And("I navigate to a \"taskmaster\" episode", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 37
+  testRunner.And("I navigate to register from episode", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
+                        "Email",
+                        "Password",
+                        "FirstName",
+                        "LastName",
+                        "Gender",
+                        "PostCode"});
+            table4.AddRow(new string[] {
+                        "ami.patel@testuktv.co.uk",
+                        "password123",
+                        "John",
+                        "Smith",
+                        "Male",
+                        "WD17 1JJ"});
+#line 38
+ testRunner.When("I register a new user with the following details", ((string)(null)), table4, "When ");
+#line 41
+ testRunner.Then("I should be successfully signed in", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Register From Burger Menu")]
+        public virtual void RegisterFromBurgerMenu()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Register From Burger Menu", ((string[])(null)));
+#line 43
+this.ScenarioSetup(scenarioInfo);
+#line 44
+ testRunner.Given("I am on the onboarding screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 45
+  testRunner.And("I skip the registration", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 46
+  testRunner.And("I navigate to \"SIGN IN\" from burger menu", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 47
+  testRunner.And("I navigate to register now", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            TechTalk.SpecFlow.Table table5 = new TechTalk.SpecFlow.Table(new string[] {
+                        "Email",
+                        "Password",
+                        "FirstName",
+                        "LastName",
+                        "Gender",
+                        "PostCode"});
+            table5.AddRow(new string[] {
+                        "ami.patel@testuktv.co.uk",
+                        "password123",
+                        "John",
+                        "Smith",
+                        "Male",
+                        "WD17 1JJ"});
+#line 48
+ testRunner.When("I register a new user with the following details", ((string)(null)), table5, "When ");
+#line 51
+ testRunner.Then("I should be successfully signed in", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
     }
 }
 #pragma warning restore

@@ -29,3 +29,23 @@ Scenario: Register From Home
 		| Email                    | Password    | FirstName | LastName | Gender | PostCode |
 		| ami.patel@testuktv.co.uk | password123 | John      | Smith    | Male   | WD17 1JJ |
 	Then I should be successfully signed in
+
+Scenario: Register From Episode 
+	Given I am on the onboarding screen
+		And I skip the registration
+		And I navigate to a "taskmaster" episode
+		And I navigate to register from episode
+	When I register a new user with the following details
+		| Email                    | Password    | FirstName | LastName | Gender | PostCode |
+		| ami.patel@testuktv.co.uk | password123 | John      | Smith    | Male   | WD17 1JJ |
+	Then I should be successfully signed in
+
+Scenario: Register From Burger Menu 
+	Given I am on the onboarding screen
+		And I skip the registration
+		And I navigate to "SIGN IN" from burger menu
+		And I navigate to register now
+	When I register a new user with the following details
+		| Email                    | Password    | FirstName | LastName | Gender | PostCode |
+		| ami.patel@testuktv.co.uk | password123 | John      | Smith    | Male   | WD17 1JJ |
+	Then I should be successfully signed in

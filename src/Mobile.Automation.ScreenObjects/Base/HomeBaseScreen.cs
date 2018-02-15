@@ -1,5 +1,4 @@
-﻿using Mobile.Automation.ScreenObjects.Manager;
-using System;
+﻿using System;
 using Xamarin.UITest.Queries;
 
 namespace Mobile.Automation.ScreenObjects.Base
@@ -9,9 +8,7 @@ namespace Mobile.Automation.ScreenObjects.Base
         #region Elements
 
         protected virtual Func<AppQuery, AppQuery> profileIcon { get; } = x => x.Class("ActionMenuItemView").Index(0);
-        protected virtual Func<AppQuery, AppQuery> homeTitle { get; } = x => x.Text("HOME");
-        protected virtual Func<AppQuery, AppQuery> boxSets { get; } = x => x.Text("BOX SETS");
-        protected virtual Func<AppQuery, AppQuery> collections { get; } = x => x.Text("COLLECTIONS");
+        protected virtual Func<AppQuery, AppQuery> searchIcon { get; } = x => x.Class("ActionMenuItemView").Index(1);
 
         #endregion
 
@@ -20,15 +17,13 @@ namespace Mobile.Automation.ScreenObjects.Base
         public virtual void GoToProfile()
         {
             WaitForHomeScreen();
-            AppManager.App.WaitForElement(profileIcon);
-            AppManager.App.Tap(profileIcon);
+            Tap(profileIcon);
         }
 
-        private void WaitForHomeScreen()
+        public virtual void TapSearch()
         {
-            AppManager.App.WaitForElement(homeTitle);
-            AppManager.App.WaitForElement(boxSets);
-            AppManager.App.WaitForElement(collections);
+            WaitForHomeScreen();
+            Tap(searchIcon);
         }
 
         #endregion
