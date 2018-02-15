@@ -64,28 +64,36 @@ namespace Mobile.Automation.Specs.Features
             testRunner.CollectScenarioErrors();
         }
         
+        public virtual void FeatureBackground()
+        {
+#line 6
+#line 7
+ testRunner.Given("I am on the onboarding screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+        }
+        
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Verify Welcome Onboarding")]
         public virtual void VerifyWelcomeOnboarding()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify Welcome Onboarding", ((string[])(null)));
-#line 6
-this.ScenarioSetup(scenarioInfo);
-#line 7
- testRunner.Given("I am on the onboarding screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 8
- testRunner.Then("I should see the skip option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 9
-  testRunner.And("the Welcome title", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+this.ScenarioSetup(scenarioInfo);
+#line 6
+this.FeatureBackground();
 #line 10
-  testRunner.And("the sub text \"Watch the TV you love on demand for free\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.Then("I should see the skip option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 11
-  testRunner.And("the UKTV logo", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("the Welcome title", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 12
-  testRunner.And("the register button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("the sub text \"Watch the TV you love on demand for free\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 13
-  testRunner.And("the sign in with Facebook button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("the UKTV logo", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 14
+  testRunner.And("the register button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 15
+  testRunner.And("the sign in with Facebook button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 16
   testRunner.And("the sign in link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
@@ -96,25 +104,25 @@ this.ScenarioSetup(scenarioInfo);
         public virtual void VerifySeeItFirstOnboarding()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify See It First Onboarding", ((string[])(null)));
-#line 16
-this.ScenarioSetup(scenarioInfo);
-#line 17
- testRunner.Given("I am on the onboarding screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 18
- testRunner.When("I swipe left once", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+this.ScenarioSetup(scenarioInfo);
+#line 6
+this.FeatureBackground();
 #line 19
- testRunner.Then("I should see the skip option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.When("I swipe left once", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 20
-  testRunner.And("the see it first title", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.Then("I should see the skip option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 21
-  testRunner.And("the sub text \"Exclusive previews of brand new shows\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("the see it first title", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 22
-  testRunner.And("the cupcake logo", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("the sub text \"Exclusive previews of brand new shows\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 23
-  testRunner.And("the register button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("the cupcake logo", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 24
-  testRunner.And("the sign in with Facebook button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("the register button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 25
+  testRunner.And("the sign in with Facebook button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 26
   testRunner.And("the sign in link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
@@ -125,10 +133,10 @@ this.ScenarioSetup(scenarioInfo);
         public virtual void VerifyBoxSetsOnboarding()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify Box Sets Onboarding", ((string[])(null)));
-#line 27
-this.ScenarioSetup(scenarioInfo);
 #line 28
- testRunner.Given("I am on the onboarding screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+this.ScenarioSetup(scenarioInfo);
+#line 6
+this.FeatureBackground();
 #line 29
  testRunner.When("I swipe left twice", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 30

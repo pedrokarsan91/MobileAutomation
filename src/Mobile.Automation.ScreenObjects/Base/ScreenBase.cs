@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Xamarin.UITest;
 using Xamarin.UITest.Queries;
 
 namespace Mobile.Automation.ScreenObjects.Base
@@ -31,6 +32,17 @@ namespace Mobile.Automation.ScreenObjects.Base
                 AppManager.App.SwipeRightToLeft();
                 startNumber++;
             }
+        }
+
+        public void Tap(Func<AppQuery, AppQuery> element)
+        {
+            AppManager.App.WaitForElement(element);
+            AppManager.App.Tap(element);
+        }
+
+        public void ScrollDown()
+        {
+            AppManager.App.ScrollDown(strategy: ScrollStrategy.Gesture);
         }
     }
 }

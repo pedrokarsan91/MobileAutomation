@@ -45,15 +45,23 @@
   <ItemGroup>
     <Compile Include="Base\FeatureBase.cs" />
     <Compile Include="FeaturesExtender\OnboardingFeature.cs" />
+    <Compile Include="FeaturesExtender\RegisterFeature.cs" />
     <Compile Include="Features\Onboarding.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Onboarding.feature</DependentUpon>
     </Compile>
+    <Compile Include="Features\Register.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Register.feature</DependentUpon>
+    </Compile>
     <Compile Include="Hooks\BeforeAfterScenario.cs" />
     <Compile Include="Hooks\BeforeAfterTestRun.cs" />
     <Compile Include="StepDefinitions\CommonSteps.cs" />
     <Compile Include="StepDefinitions\OnboardingSteps.cs" />
+    <Compile Include="StepDefinitions\RegisterSteps.cs" />
+    <Compile Include="StepDefinitions\Transform\CustomTransform.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -63,6 +71,10 @@
     <None Include="Features\Onboarding.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>Onboarding.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\Register.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>Register.feature.cs</LastGenOutput>
     </None>
     <None Include="packages.config" />
   </ItemGroup>

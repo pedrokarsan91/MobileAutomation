@@ -86,6 +86,11 @@ namespace Mobile.Automation.ScreenObjects.Base
             return IsElementExist(signInLink);
         }
 
+        public virtual void NavigateToRegister()
+        {
+            Tap(registerButton);
+        }
+
         #endregion
     }
 }

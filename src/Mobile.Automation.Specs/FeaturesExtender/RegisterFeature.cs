@@ -3,9 +3,9 @@ using Xamarin.UITest;
 
 namespace Mobile.Automation.Specs.Features
 {
-    partial class OnboardingFeature : FeatureBase
+    partial class RegisterFeature : FeatureBase
     {
-        public OnboardingFeature(Platform platform) : base(platform)
+        public RegisterFeature(Platform platform) : base(platform)
         {
         }
     }
