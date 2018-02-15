@@ -4,8 +4,8 @@ using Xamarin.UITest;
 
 namespace Mobile.Automation.Specs.Base
 {
-    [TestFixture(Platform.Android)]
-    [TestFixture(Platform.iOS)]
+    [TestFixture(Platform.Android, Category = "Android")]
+    [TestFixture(Platform.iOS, Category = "iOS")]
     public class FeatureBase
     {
         [SetUp]
