@@ -42,5 +42,35 @@ namespace Mobile.Automation.ScreenObjects
                 }
             }
         }
+
+        public static HomeBaseScreen HomeScreen
+        {
+            get
+            {
+                if (Current.Platform == Platform.Android)
+                {
+                    return GetScreen<AndroidHomeScreen>();
+                }
+                else
+                {
+                    return GetScreen<AppleiOSHomeScreen>();
+                }
+            }
+        }
+
+        public static ProfileBaseScreen ProfileScreen
+        {
+            get
+            {
+                if (Current.Platform == Platform.Android)
+                {
+                    return GetScreen<AndroidProfileScreen>();
+                }
+                else
+                {
+                    return GetScreen<AppleiOSProfileScreen>();
+                }
+            }
+        }
     }
 }

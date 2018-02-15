@@ -19,12 +19,13 @@ namespace Mobile.Automation.ScreenObjects.Base
         protected virtual Func<AppQuery, AppQuery> confirmDateOfBirth { get; } = x => x.Text("Confirm");
         protected virtual Func<AppQuery, AppQuery> postCodeTextBox { get; } = x => x.Id("titanium_ui_edittext").Index(0);
         protected virtual Func<AppQuery, AppQuery> subscriptionCheckBox { get; } = x => x.Id("titanium_ui_checkbox");
-        
+        protected virtual Func<AppQuery, AppQuery> continueButton { get; } = x => x.Text("Continue");
+
         #endregion
 
         #region Methods
 
-        public void RegisterNewUser(RegisterDetails registerDetails)
+        public virtual void RegisterNewUser(RegisterDetails registerDetails)
         {
             AppManager.App.EnterText(emailTextBox, MakeEmailUnique(registerDetails.Email));
             AppManager.App.DismissKeyboard();
@@ -43,6 +44,7 @@ namespace Mobile.Automation.ScreenObjects.Base
             AppManager.App.DismissKeyboard();
             ScrollDown();
             TapRegister();
+            AppManager.App.Tap(continueButton);
         }
 
         private string MakeEmailUnique(string emailToMakeUnique)

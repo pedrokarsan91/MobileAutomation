@@ -8,3 +8,4 @@ Scenario: Register from onboarding
 	When I register a new user with the following details
 		| Email                    | Password    | FirstName | LastName | Gender | PostCode |
 		| ami.patel@testuktv.co.uk | password123 | John      | Smith    | Male   | WD17 1JJ |
+	Then I should be successfully signed in

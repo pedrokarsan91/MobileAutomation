@@ -89,6 +89,8 @@ this.ScenarioSetup(scenarioInfo);
                         "WD17 1JJ"});
 #line 8
  testRunner.When("I register a new user with the following details", ((string)(null)), table1, "When ");
+#line 11
+ testRunner.Then("I should be successfully signed in", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

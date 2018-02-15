@@ -61,6 +61,7 @@
     <Compile Include="StepDefinitions\CommonSteps.cs" />
     <Compile Include="StepDefinitions\OnboardingSteps.cs" />
     <Compile Include="StepDefinitions\RegisterSteps.cs" />
+    <Compile Include="StepDefinitions\SignInSteps.cs" />
     <Compile Include="StepDefinitions\Transform\CustomTransform.cs" />
   </ItemGroup>
   <ItemGroup>
