@@ -49,6 +49,7 @@
     <Compile Include="Base\ProfileBaseScreen.cs" />
     <Compile Include="Base\RegisterBaseScreen.cs" />
     <Compile Include="Base\ScreenBase.cs" />
+    <Compile Include="Base\SignInBaseScreen.cs" />
     <Compile Include="Current.cs" />
     <Compile Include="Manager\AppManager.cs" />
     <Compile Include="Models\RegisterDetails.cs" />
@@ -62,6 +63,8 @@
     <Compile Include="Screens\Profile\AppleiOSProfileScreen.cs" />
     <Compile Include="Screens\Register\AndroidRegisterScreen.cs" />
     <Compile Include="Screens\Register\AppleiOSRegisterScreen.cs" />
+    <Compile Include="Screens\SignIn\AndroidSignInScreen.cs" />
+    <Compile Include="Screens\SignIn\AppleiOSSignInScreen.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

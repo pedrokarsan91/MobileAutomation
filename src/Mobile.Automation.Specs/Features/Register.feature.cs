@@ -64,14 +64,16 @@ namespace Mobile.Automation.Specs.Features
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Register from onboarding")]
+        [NUnit.Framework.DescriptionAttribute("Register From Onboarding")]
         public virtual void RegisterFromOnboarding()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Register from onboarding", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Register From Onboarding", ((string[])(null)));
 #line 6
 this.ScenarioSetup(scenarioInfo);
 #line 7
  testRunner.Given("I am on the onboarding screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 8
+  testRunner.And("I navigate to register", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
                         "Email",
@@ -87,9 +89,83 @@ this.ScenarioSetup(scenarioInfo);
                         "Smith",
                         "Male",
                         "WD17 1JJ"});
-#line 8
+#line 9
  testRunner.When("I register a new user with the following details", ((string)(null)), table1, "When ");
-#line 11
+#line 12
+ testRunner.Then("I should be successfully signed in", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Register From Onboarding Sign In")]
+        public virtual void RegisterFromOnboardingSignIn()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Register From Onboarding Sign In", ((string[])(null)));
+#line 14
+this.ScenarioSetup(scenarioInfo);
+#line 15
+ testRunner.Given("I am on the onboarding screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 16
+  testRunner.And("I navigate to sign in", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 17
+  testRunner.And("I navigate to register now", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
+                        "Email",
+                        "Password",
+                        "FirstName",
+                        "LastName",
+                        "Gender",
+                        "PostCode"});
+            table2.AddRow(new string[] {
+                        "ami.patel@testuktv.co.uk",
+                        "password123",
+                        "John",
+                        "Smith",
+                        "Male",
+                        "WD17 1JJ"});
+#line 18
+ testRunner.When("I register a new user with the following details", ((string)(null)), table2, "When ");
+#line 21
+ testRunner.Then("I should be successfully signed in", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Register From Home")]
+        public virtual void RegisterFromHome()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Register From Home", ((string[])(null)));
+#line 23
+this.ScenarioSetup(scenarioInfo);
+#line 24
+ testRunner.Given("I am on the onboarding screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 25
+  testRunner.And("I skip the registration", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 26
+  testRunner.And("I navigate to sign in from home", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 27
+  testRunner.And("I navigate to register now", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
+                        "Email",
+                        "Password",
+                        "FirstName",
+                        "LastName",
+                        "Gender",
+                        "PostCode"});
+            table3.AddRow(new string[] {
+                        "ami.patel@testuktv.co.uk",
+                        "password123",
+                        "John",
+                        "Smith",
+                        "Male",
+                        "WD17 1JJ"});
+#line 28
+ testRunner.When("I register a new user with the following details", ((string)(null)), table3, "When ");
+#line 31
  testRunner.Then("I should be successfully signed in", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();

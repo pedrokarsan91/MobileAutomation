@@ -91,6 +91,16 @@ namespace Mobile.Automation.ScreenObjects.Base
             Tap(registerButton);
         }
 
+        public virtual void NavigateToSignIn()
+        {
+            Tap(signInLink);
+        }
+
+        public virtual void SkipRegistration()
+        {
+            Tap(skipLink);
+        }
+
         #endregion
     }
 }
