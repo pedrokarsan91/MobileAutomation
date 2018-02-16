@@ -12,5 +12,11 @@ namespace MobBox.BddTests.Specs.StepDefs.Transform
         {
             return registerDetails.CreateInstance<RegisterDetails>();
         }
+
+        [StepArgumentTransformation]
+        public SignInDetails SignInTransform(Table signInDetails)
+        {
+            return signInDetails.CreateInstance<SignInDetails>();
+        }
     }
 }

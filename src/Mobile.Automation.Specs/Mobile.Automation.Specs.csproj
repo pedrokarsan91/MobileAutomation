@@ -46,6 +46,7 @@
     <Compile Include="Base\FeatureBase.cs" />
     <Compile Include="FeaturesExtender\OnboardingFeature.cs" />
     <Compile Include="FeaturesExtender\RegisterFeature.cs" />
+    <Compile Include="FeaturesExtender\SignInFeature.cs" />
     <Compile Include="Features\Onboarding.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -55,6 +56,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Register.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Features\SignIn.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SignIn.feature</DependentUpon>
     </Compile>
     <Compile Include="Hooks\BeforeAfterScenario.cs" />
     <Compile Include="Hooks\BeforeAfterTestRun.cs" />
@@ -77,6 +83,10 @@
     <None Include="Features\Register.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>Register.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\SignIn.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>SignIn.feature.cs</LastGenOutput>
     </None>
     <None Include="packages.config" />
   </ItemGroup>

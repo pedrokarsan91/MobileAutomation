@@ -48,6 +48,12 @@ namespace Mobile.Automation.ScreenObjects.Base
             AppManager.App.Tap(element);
         }
 
+        public void EnterText(Func<AppQuery, AppQuery> element, string text)
+        {
+            AppManager.App.WaitForElement(element);
+            AppManager.App.EnterText(element, text);
+        }
+
         public void ScrollDown()
         {
             AppManager.App.ScrollDown(strategy: ScrollStrategy.Gesture);

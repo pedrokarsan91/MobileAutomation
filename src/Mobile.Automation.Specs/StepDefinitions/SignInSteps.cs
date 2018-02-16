@@ -1,4 +1,5 @@
 ﻿using Mobile.Automation.ScreenObjects;
+using Mobile.Automation.ScreenObjects.Models;
 using TechTalk.SpecFlow;
 
 namespace Mobile.Automation.Specs.StepDefinitions
@@ -19,6 +20,12 @@ namespace Mobile.Automation.Specs.StepDefinitions
             Screen.ProfileScreen.IsAt();
         }
 
+        [Then(@"I should be on my profile successfully signed in")]
+        public void ThenIShouldBeOnMyProfileSuccessfullySignedIn()
+        {
+            Screen.ProfileScreen.IsAt();
+        }
+
         [Given(@"I navigate to sign in from home")]
         public void GivenINavigateToSignInFromHome()
         {
@@ -30,6 +37,24 @@ namespace Mobile.Automation.Specs.StepDefinitions
         {
             Screen.HomeScreen.OpenBurgerMenu();
             Screen.HomeScreen.SelectBurgerMenuOption(burgerMenuItem);
+        }
+
+        [When(@"I sign in with the following details")]
+        public void WhenISignInWithTheFollowingDetails(SignInDetails signInDetails)
+        {
+            Screen.SignInScreen.SignIn(signInDetails);
+        }
+
+        [Given(@"I navigate to sign in from register")]
+        public void GivenINavigateToSignInFromRegister()
+        {
+            Screen.RegisterScreen.NavigateToSignIn();
+        }
+
+        [Given(@"I navigate to sign in from episode")]
+        public void GivenINavigateToSignInFromEpisode()
+        {
+            Screen.EpisodeScreen.NavigateSignIn();
         }
     }
 }

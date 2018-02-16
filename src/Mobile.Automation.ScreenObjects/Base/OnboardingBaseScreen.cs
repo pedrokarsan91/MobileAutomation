@@ -9,9 +9,9 @@ namespace Mobile.Automation.ScreenObjects.Base
 
         protected virtual Func<AppQuery, AppQuery> skipLink { get; } = x => x.Text("Skip");
 
-        protected virtual Func<AppQuery, AppQuery> welcome { get; } = x => x.Text("Welcome");
-        protected virtual Func<AppQuery, AppQuery> seeItFirst { get; } = x => x.Text("See it first");
-        protected virtual Func<AppQuery, AppQuery> boxSets { get; } = x => x.Text("Box sets");
+        protected virtual Func<AppQuery, AppQuery> welcomeTitle { get; } = x => x.Text("Welcome");
+        protected virtual Func<AppQuery, AppQuery> seeItFirstTitle { get; } = x => x.Text("See it first");
+        protected virtual Func<AppQuery, AppQuery> boxSetsTitle { get; } = x => x.Text("Box sets");
 
         protected virtual Func<AppQuery, AppQuery> uktvLogo { get; } = x => x.Text("»");
         protected virtual Func<AppQuery, AppQuery> cupcakeLogo { get; } = x => x.Text(";");
@@ -27,7 +27,7 @@ namespace Mobile.Automation.ScreenObjects.Base
 
         public virtual bool IsAt()
         {
-            return IsElementExist(welcome);
+            return IsElementExist(welcomeTitle);
         }
 
         public virtual bool IsSkipOptionExist()
@@ -37,17 +37,17 @@ namespace Mobile.Automation.ScreenObjects.Base
 
         public virtual bool IsWelcomeExist()
         {
-            return IsElementExist(welcome);
+            return IsElementExist(welcomeTitle);
         }
 
         public virtual bool IsSeeItFirstExist()
         {
-            return IsElementExist(seeItFirst);
+            return IsElementExist(seeItFirstTitle);
         }
 
         public virtual bool IsBoxSetsExist()
         {
-            return IsElementExist(boxSets);
+            return IsElementExist(boxSetsTitle);
         }
 
         public virtual bool IsSubTextExist(string subText)

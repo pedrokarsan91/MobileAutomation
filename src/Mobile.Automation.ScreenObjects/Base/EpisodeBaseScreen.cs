@@ -9,6 +9,7 @@ namespace Mobile.Automation.ScreenObjects.Base
 
         protected virtual Func<AppQuery, AppQuery> playButton { get; } = x => x.Text("G");
         protected virtual Func<AppQuery, AppQuery> registerNowButton { get; } = x => x.Text("REGISTER NOW");
+        protected virtual Func<AppQuery, AppQuery> signInButton { get; } = x => x.Text("SIGN IN");
 
         #endregion
 
@@ -18,6 +19,12 @@ namespace Mobile.Automation.ScreenObjects.Base
         {
             Tap(playButton);
             Tap(registerNowButton);
+        }
+
+        public virtual void NavigateSignIn()
+        {
+            Tap(playButton);
+            Tap(signInButton);
         }
 
         #endregion
