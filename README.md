@@ -3,7 +3,7 @@
 - Install Visual Studio Community with Xamarin
 - Open Visual Studio
 - Tool/Extentions and Updates
-- Install NUnit Test 3 Adapter
+- Install NUnit Test 2 Adapter
 - Install Specflow
 - Open solution file
 - Clean/Rebuild solution
