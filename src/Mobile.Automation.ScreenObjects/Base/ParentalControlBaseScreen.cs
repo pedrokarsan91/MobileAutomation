@@ -52,6 +52,25 @@ namespace Mobile.Automation.ScreenObjects.Base
             Tap(enablePinButton);
         }
 
+        public virtual void CloseSuccessPopUp()
+        {
+            Tap(popUpBoxClose);
+        }
+
+        public virtual void Close()
+        {
+            var query = AppManager.App.Query(x => x.Id("action_bar").Class("TextView"));
+            var queryCount = query.Count();
+
+            for (int index = 0; index < queryCount; index++)
+            {
+                if (query[index].Text == "PIN")
+                {
+                    Tap(x => x.Id("action_bar").Index(index).Class("ActionMenuItemView").Class("ActionMenuItemView"));
+                }
+            }
+        }
+
         #endregion
     }
 }

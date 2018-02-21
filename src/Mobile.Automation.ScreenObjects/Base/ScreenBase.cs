@@ -15,6 +15,7 @@ namespace Mobile.Automation.ScreenObjects.Base
         protected virtual Func<AppQuery, AppQuery> homeTitle { get; } = x => x.Text("HOME");
         protected virtual Func<AppQuery, AppQuery> boxSets { get; } = x => x.Text("BOX SETS");
         protected virtual Func<AppQuery, AppQuery> collections { get; } = x => x.Text("COLLECTIONS");
+        protected virtual Func<AppQuery, AppQuery> searchIcon { get; } = x => x.Class("ActionMenuItemView").Index(1);
 
         #endregion
 
@@ -130,6 +131,12 @@ namespace Mobile.Automation.ScreenObjects.Base
         public void NavigateTo(string element)
         {
             Tap(element);
+        }
+
+        public void TapSearch()
+        {
+            WaitForElement(searchIcon);
+            Tap(searchIcon);
         }
 
         #endregion

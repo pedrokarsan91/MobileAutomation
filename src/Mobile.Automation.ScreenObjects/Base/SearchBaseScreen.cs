@@ -1,6 +1,5 @@
 ﻿using Mobile.Automation.ScreenObjects.Manager;
 using System;
-using System.Linq;
 using Xamarin.UITest.Queries;
 
 namespace Mobile.Automation.ScreenObjects.Base
@@ -18,7 +17,7 @@ namespace Mobile.Automation.ScreenObjects.Base
         public virtual void SearchAndGoToEpisode(string seriesName)
         {
             AppManager.App.EnterText(searchTextBox, seriesName);
-            var resultToSelect = seriesName.First().ToString().ToUpper() + seriesName.Substring(1);
+            var resultToSelect = System.Threading.Thread.CurrentThread.CurrentCulture.TextInfo.ToTitleCase(seriesName.ToLower());
             AppManager.App.Tap(resultToSelect);
         }
 
