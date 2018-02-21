@@ -1,8 +1,8 @@
 ﻿using Mobile.Automation.ScreenObjects.Base;
 
-namespace Mobile.Automation.ScreenObjects.Screens.Search
+namespace Mobile.Automation.ScreenObjects.Screens.Settings
 {
-    public class AppleiOSSearchScreen : SearchBaseScreen
+    public class AndroidSettingsScreen : SettingsBaseScreen
     {
         #region Elements
 

@@ -45,12 +45,18 @@
   <ItemGroup>
     <Compile Include="Base\FeatureBase.cs" />
     <Compile Include="FeaturesExtender\OnboardingFeature.cs" />
+    <Compile Include="FeaturesExtender\ParentalControlFeature.cs" />
     <Compile Include="FeaturesExtender\RegisterFeature.cs" />
     <Compile Include="FeaturesExtender\SignInFeature.cs" />
     <Compile Include="Features\Onboarding.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Onboarding.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Features\ParentalControl.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ParentalControl.feature</DependentUpon>
     </Compile>
     <Compile Include="Features\Register.feature.cs">
       <AutoGen>True</AutoGen>
@@ -66,6 +72,7 @@
     <Compile Include="Hooks\BeforeAfterTestRun.cs" />
     <Compile Include="StepDefinitions\CommonSteps.cs" />
     <Compile Include="StepDefinitions\OnboardingSteps.cs" />
+    <Compile Include="StepDefinitions\ParentalControlSteps.cs" />
     <Compile Include="StepDefinitions\RegisterSteps.cs" />
     <Compile Include="StepDefinitions\SearchSteps.cs" />
     <Compile Include="StepDefinitions\SignInSteps.cs" />
@@ -79,6 +86,10 @@
     <None Include="Features\Onboarding.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>Onboarding.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\ParentalControl.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>ParentalControl.feature.cs</LastGenOutput>
     </None>
     <None Include="Features\Register.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>

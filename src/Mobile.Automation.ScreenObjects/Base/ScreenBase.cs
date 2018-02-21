@@ -1,6 +1,7 @@
 ﻿using Mobile.Automation.ScreenObjects.Manager;
 using System;
 using System.Linq;
+using System.Threading;
 using Xamarin.UITest;
 using Xamarin.UITest.Queries;
 
@@ -32,6 +33,19 @@ namespace Mobile.Automation.ScreenObjects.Base
             }
         }
 
+        public bool IsElementExist(string element)
+        {
+            try
+            {
+                AppManager.App.WaitForElement(element);
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
         public void SwipeLeft(int numberOfTimes)
         {
             var startNumber = 0;
@@ -48,6 +62,12 @@ namespace Mobile.Automation.ScreenObjects.Base
             AppManager.App.Tap(element);
         }
 
+        public void Tap(string element)
+        {
+            AppManager.App.WaitForElement(element);
+            AppManager.App.Tap(element);
+        }
+
         public void EnterText(Func<AppQuery, AppQuery> element, string text)
         {
             AppManager.App.WaitForElement(element);
@@ -57,6 +77,26 @@ namespace Mobile.Automation.ScreenObjects.Base
         public void ScrollDown()
         {
             AppManager.App.ScrollDown(strategy: ScrollStrategy.Gesture);
+        }
+
+        public void ScrollDownTo(Func<AppQuery, AppQuery> element)
+        {
+            AppManager.App.ScrollDownTo(element);
+        }
+
+        public void WaitForElement(Func<AppQuery, AppQuery> element)
+        {
+            AppManager.App.WaitForElement(element);
+        }
+
+        public void Wait()
+        {
+            Thread.Sleep(3000);
+        }
+
+        public void DismissKeyboard()
+        {
+            AppManager.App.DismissKeyboard();
         }
 
         public void OpenBurgerMenu()
@@ -85,8 +125,11 @@ namespace Mobile.Automation.ScreenObjects.Base
                     break;
                 }
             }
+        }
 
-
+        public void NavigateTo(string element)
+        {
+            Tap(element);
         }
 
         #endregion

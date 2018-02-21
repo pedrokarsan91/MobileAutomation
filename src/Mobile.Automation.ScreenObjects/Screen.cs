@@ -1,8 +1,10 @@
 ﻿using Mobile.Automation.ScreenObjects.Base;
 using Mobile.Automation.ScreenObjects.Screens.Episode;
 using Mobile.Automation.ScreenObjects.Screens.Onboarding;
+using Mobile.Automation.ScreenObjects.Screens.ParenalControl;
 using Mobile.Automation.ScreenObjects.Screens.Register;
 using Mobile.Automation.ScreenObjects.Screens.Search;
+using Mobile.Automation.ScreenObjects.Screens.Settings;
 using Mobile.Automation.ScreenObjects.Screens.SignIn;
 using Xamarin.UITest;
 
@@ -117,6 +119,36 @@ namespace Mobile.Automation.ScreenObjects
                 else
                 {
                     return GetScreen<AppleiOSEpisodeScreen>();
+                }
+            }
+        }
+
+        public static SettingsBaseScreen SettingsScreen
+        {
+            get
+            {
+                if (Current.Platform == Platform.Android)
+                {
+                    return GetScreen<AndroidSettingsScreen>();
+                }
+                else
+                {
+                    return GetScreen<AppleiOSSettingsScreen>();
+                }
+            }
+        }
+
+        public static ParentalControlBaseScreen ParentalControlScreen
+        {
+            get
+            {
+                if (Current.Platform == Platform.Android)
+                {
+                    return GetScreen<AndroidParentalControlScreen>();
+                }
+                else
+                {
+                    return GetScreen<AppleiOSParentalControlScreen>();
                 }
             }
         }

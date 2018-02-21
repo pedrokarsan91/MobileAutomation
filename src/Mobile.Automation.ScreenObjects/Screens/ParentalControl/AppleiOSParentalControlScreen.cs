@@ -1,8 +1,8 @@
 ﻿using Mobile.Automation.ScreenObjects.Base;
 
-namespace Mobile.Automation.ScreenObjects.Screens.Search
+namespace Mobile.Automation.ScreenObjects.Screens.ParenalControl
 {
-    public class AppleiOSSearchScreen : SearchBaseScreen
+    public class AppleiOSParentalControlScreen : ParentalControlBaseScreen
     {
         #region Elements
 
@@ -17,3 +17,4 @@ namespace Mobile.Automation.ScreenObjects.Screens.Search
         #endregion
     }
 }
+
