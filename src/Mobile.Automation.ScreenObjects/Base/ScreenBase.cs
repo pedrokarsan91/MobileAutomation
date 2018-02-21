@@ -1,6 +1,7 @@
 ﻿using Mobile.Automation.ScreenObjects.Manager;
 using System;
 using System.Linq;
+using System.Threading;
 using Xamarin.UITest;
 using Xamarin.UITest.Queries;
 
@@ -14,12 +15,26 @@ namespace Mobile.Automation.ScreenObjects.Base
         protected virtual Func<AppQuery, AppQuery> homeTitle { get; } = x => x.Text("HOME");
         protected virtual Func<AppQuery, AppQuery> boxSets { get; } = x => x.Text("BOX SETS");
         protected virtual Func<AppQuery, AppQuery> collections { get; } = x => x.Text("COLLECTIONS");
+        protected virtual Func<AppQuery, AppQuery> searchIcon { get; } = x => x.Class("ActionMenuItemView").Index(1);
 
         #endregion
 
         #region Common Methods
 
         public bool IsElementExist(Func<AppQuery, AppQuery> element)
+        {
+            try
+            {
+                AppManager.App.WaitForElement(element);
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
+        public bool IsElementExist(string element)
         {
             try
             {
@@ -48,6 +63,12 @@ namespace Mobile.Automation.ScreenObjects.Base
             AppManager.App.Tap(element);
         }
 
+        public void Tap(string element)
+        {
+            AppManager.App.WaitForElement(element);
+            AppManager.App.Tap(element);
+        }
+
         public void EnterText(Func<AppQuery, AppQuery> element, string text)
         {
             AppManager.App.WaitForElement(element);
@@ -57,6 +78,26 @@ namespace Mobile.Automation.ScreenObjects.Base
         public void ScrollDown()
         {
             AppManager.App.ScrollDown(strategy: ScrollStrategy.Gesture);
+        }
+
+        public void ScrollDownTo(Func<AppQuery, AppQuery> element)
+        {
+            AppManager.App.ScrollDownTo(element);
+        }
+
+        public void WaitForElement(Func<AppQuery, AppQuery> element)
+        {
+            AppManager.App.WaitForElement(element);
+        }
+
+        public void Wait()
+        {
+            Thread.Sleep(3000);
+        }
+
+        public void DismissKeyboard()
+        {
+            AppManager.App.DismissKeyboard();
         }
 
         public void OpenBurgerMenu()
@@ -85,8 +126,17 @@ namespace Mobile.Automation.ScreenObjects.Base
                     break;
                 }
             }
+        }
 
+        public void NavigateTo(string element)
+        {
+            Tap(element);
+        }
 
+        public void TapSearch()
+        {
+            WaitForElement(searchIcon);
+            Tap(searchIcon);
         }
 
         #endregion

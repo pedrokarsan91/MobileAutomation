@@ -28,21 +28,21 @@ namespace Mobile.Automation.ScreenObjects.Base
 
         public virtual void RegisterNewUser(RegisterDetails registerDetails)
         {
-            AppManager.App.EnterText(emailTextBox, MakeEmailUnique(registerDetails.Email));
-            AppManager.App.DismissKeyboard();
-            AppManager.App.EnterText(passwordTextBox, registerDetails.Password);
-            AppManager.App.DismissKeyboard();
-            AppManager.App.EnterText(firstNameTextBox, registerDetails.FirstName);
-            AppManager.App.DismissKeyboard();
-            AppManager.App.EnterText(lastNameTextBox, registerDetails.LastName);
-            AppManager.App.DismissKeyboard();
-            AppManager.App.ScrollDownTo(genderDropBox);
-            AppManager.App.Tap(genderDropBox);
-            AppManager.App.Tap(registerDetails.Gender);
-            AppManager.App.Tap(dateOfBirthDatePicker);
-            AppManager.App.Tap(confirmDateOfBirth);
-            AppManager.App.EnterText(postCodeTextBox, registerDetails.PostCode);
-            AppManager.App.DismissKeyboard();
+            EnterText(emailTextBox, MakeEmailUnique(registerDetails.Email));
+            DismissKeyboard();
+            EnterText(passwordTextBox, registerDetails.Password);
+            DismissKeyboard();
+            EnterText(firstNameTextBox, registerDetails.FirstName);
+            DismissKeyboard();
+            EnterText(lastNameTextBox, registerDetails.LastName);
+            DismissKeyboard();
+            ScrollDownTo(genderDropBox);
+            Tap(genderDropBox);
+            Tap(registerDetails.Gender);
+            Tap(dateOfBirthDatePicker);
+            Tap(confirmDateOfBirth);
+            EnterText(postCodeTextBox, registerDetails.PostCode);
+            DismissKeyboard();
             ScrollDown();
             TapRegister();
             Tap(continueButton);
@@ -73,7 +73,7 @@ namespace Mobile.Automation.ScreenObjects.Base
             {
                 if (registerQueryResult[index].Enabled == true && registerQueryResult[index].Label != null)
                 {
-                    AppManager.App.Tap(x => x.Text("REGISTER").Index(index));
+                    Tap(x => x.Text("REGISTER").Index(index));
                     break;
                 }
             }

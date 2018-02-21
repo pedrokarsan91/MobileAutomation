@@ -47,10 +47,12 @@
     <Compile Include="Base\EpisodeBaseScreen.cs" />
     <Compile Include="Base\HomeBaseScreen.cs" />
     <Compile Include="Base\OnboardingBaseScreen.cs" />
+    <Compile Include="Base\ParentalControlBaseScreen.cs" />
     <Compile Include="Base\ProfileBaseScreen.cs" />
     <Compile Include="Base\RegisterBaseScreen.cs" />
     <Compile Include="Base\ScreenBase.cs" />
     <Compile Include="Base\SearchBaseScreen.cs" />
+    <Compile Include="Base\SettingsBaseScreen.cs" />
     <Compile Include="Base\SignInBaseScreen.cs" />
     <Compile Include="Current.cs" />
     <Compile Include="Manager\AppManager.cs" />
@@ -64,12 +66,16 @@
     <Compile Include="Screens\Home\AppleiOSHomeScreen.cs" />
     <Compile Include="Screens\Onboarding\AndroidOnboardingScreen.cs" />
     <Compile Include="Screens\Onboarding\AppleiOSOnboardingScreen.cs" />
+    <Compile Include="Screens\ParentalControl\AndroidParentalControlScreen.cs" />
+    <Compile Include="Screens\ParentalControl\AppleiOSParentalControlScreen.cs" />
     <Compile Include="Screens\Profile\AndroidProfileScreen.cs" />
     <Compile Include="Screens\Profile\AppleiOSProfileScreen.cs" />
     <Compile Include="Screens\Register\AndroidRegisterScreen.cs" />
     <Compile Include="Screens\Register\AppleiOSRegisterScreen.cs" />
     <Compile Include="Screens\Search\AndroidSearchScreen.cs" />
     <Compile Include="Screens\Search\AppleiOSSearchScreen.cs" />
+    <Compile Include="Screens\Settings\AndroidSettingsScreen.cs" />
+    <Compile Include="Screens\Settings\AppleiOSSettingsScreen.cs" />
     <Compile Include="Screens\SignIn\AndroidSignInScreen.cs" />
     <Compile Include="Screens\SignIn\AppleiOSSignInScreen.cs" />
   </ItemGroup>
