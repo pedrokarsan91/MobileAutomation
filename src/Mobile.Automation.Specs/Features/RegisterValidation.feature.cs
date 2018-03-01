@@ -99,6 +99,7 @@ this.FeatureBackground();
         [NUnit.Framework.TestCaseAttribute("ami.patel@testukv.co.uk", "password123", "John", "Smith", "", "Default", "WD17 1JJ", "Please select your gender.", new string[0])]
         [NUnit.Framework.TestCaseAttribute("ami.patel@testukv.co.uk", "password123", "John", "Smith", "Male", "EMPTY", "WD17 1JJ", "Please select your date of birth.", new string[0])]
         [NUnit.Framework.TestCaseAttribute("ami.patel@testukv.co.uk", "password123", "John", "Smith", "Male", "Default", "", "Please enter your postcode.", new string[0])]
+        [NUnit.Framework.TestCaseAttribute("ami.patel@testukv.co.uk", "password123", "John", "Smith", "Male", "Default", "ABCD EFG", "Please enter a valid postcode.", new string[0])]
         public virtual void RegisterValidation(string email, string password, string firstName, string lastName, string gender, string dOB, string postCode, string error, string[] exampleTags)
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Register Validation", exampleTags);

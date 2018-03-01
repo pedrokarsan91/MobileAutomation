@@ -26,4 +26,5 @@ Scenario Outline: Register Validation
 		| ami.patel@testukv.co.uk | password123 | John      | Smith    |        | Default | WD17 1JJ | Please select your gender.                  |
 		| ami.patel@testukv.co.uk | password123 | John      | Smith    | Male   | EMPTY   | WD17 1JJ | Please select your date of birth.           |
 		| ami.patel@testukv.co.uk | password123 | John      | Smith    | Male   | Default |          | Please enter your postcode.                 |
+		| ami.patel@testukv.co.uk | password123 | John      | Smith    | Male   | Default | ABCD EFG | Please enter a valid postcode.              |
 
