@@ -31,6 +31,11 @@ namespace Mobile.Automation.ScreenObjects.Base
             Tap(signInButton);
         }
 
+        public virtual void TapSignIn()
+        {
+            Tap(signInButton);
+        }
+
         #endregion
     }
 }

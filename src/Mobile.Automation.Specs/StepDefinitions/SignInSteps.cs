@@ -1,5 +1,6 @@
 ﻿using Mobile.Automation.ScreenObjects;
 using Mobile.Automation.ScreenObjects.Models;
+using NUnit.Framework;
 using TechTalk.SpecFlow;
 
 namespace Mobile.Automation.Specs.StepDefinitions
@@ -55,6 +56,18 @@ namespace Mobile.Automation.Specs.StepDefinitions
         public void GivenINavigateToSignInFromEpisode()
         {
             Screen.EpisodeScreen.NavigateSignIn();
+        }
+
+        [When(@"I sign in")]
+        public void WhenISignIn()
+        {
+            Screen.SignInScreen.TapSignIn();
+        }
+
+        [Then(@"I should see the sign in error ""(.*)""")]
+        public void ThenIShouldSeeTheSignInError(string expectedMessage)
+        {
+            Assert.IsTrue(Screen.SignInScreen.IsElementExist(expectedMessage));
         }
     }
 }
