@@ -1,5 +1,4 @@
-﻿using Mobile.Automation.ScreenObjects.Manager;
-using Mobile.Automation.ScreenObjects.Models;
+﻿using Mobile.Automation.ScreenObjects.Models;
 using System;
 using Xamarin.UITest.Queries;
 
@@ -26,9 +25,9 @@ namespace Mobile.Automation.ScreenObjects.Base
         public virtual void SignIn(SignInDetails signInDetails)
         {
             EnterText(emailTextBox, signInDetails.Email);
-            AppManager.App.DismissKeyboard();
+            DismissKeyboard();
             EnterText(passwordTextBox, signInDetails.Password);
-            AppManager.App.DismissKeyboard();
+            DismissKeyboard();
             Tap(signInButton);
         }
 

@@ -20,12 +20,6 @@ namespace Mobile.Automation.ScreenObjects.Base
             Tap(profileIcon);
         }
 
-        public virtual void TapSearch()
-        {
-            WaitForHomeScreen();
-            Tap(searchIcon);
-        }
-
         #endregion
     }
 }
