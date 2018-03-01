@@ -1,5 +1,6 @@
 ﻿using Mobile.Automation.ScreenObjects;
 using Mobile.Automation.ScreenObjects.Models;
+using NUnit.Framework;
 using TechTalk.SpecFlow;
 
 namespace Mobile.Automation.Specs.StepDefinitions
@@ -19,6 +20,12 @@ namespace Mobile.Automation.Specs.StepDefinitions
             Screen.RegisterScreen.RegisterNewUser(registerDetails);
         }
 
+        [When(@"I register an invalid user with the following details")]
+        public void WhenIRegisterAnInvalidUserWithTheFollowingDetails(RegisterDetails registerDetails)
+        {
+            Screen.RegisterScreen.RegisterInvalidUser(registerDetails);
+        }
+
         [Given(@"I navigate to register now")]
         public void GivenINavigateToRegisterNow()
         {
@@ -30,5 +37,18 @@ namespace Mobile.Automation.Specs.StepDefinitions
         {
             Screen.EpisodeScreen.NavigateToRegister();
         }
+
+        [When(@"I register")]
+        public void WhenIRegister()
+        {
+            Screen.RegisterScreen.ScrollDownToRegisterButton();
+        }
+
+        [Then(@"I should see the register error ""(.*)""")]
+        public void ThenIShouldSeeTheRegisterError(string expectedMessage)
+        {
+            Assert.IsTrue(Screen.RegisterScreen.IsElementExist(expectedMessage));
+        }
+
     }
 }

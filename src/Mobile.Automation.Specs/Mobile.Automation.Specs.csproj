@@ -47,6 +47,7 @@
     <Compile Include="FeaturesExtender\OnboardingFeature.cs" />
     <Compile Include="FeaturesExtender\ParentalControlFeature.cs" />
     <Compile Include="FeaturesExtender\RegisterFeature.cs" />
+    <Compile Include="FeaturesExtender\RegisterValidationFeature.cs" />
     <Compile Include="FeaturesExtender\SignInFeature.cs" />
     <Compile Include="Features\Onboarding.feature.cs">
       <AutoGen>True</AutoGen>
@@ -62,6 +63,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Register.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Features\RegisterValidation.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RegisterValidation.feature</DependentUpon>
     </Compile>
     <Compile Include="Features\SignIn.feature.cs">
       <AutoGen>True</AutoGen>
@@ -94,6 +100,10 @@
     <None Include="Features\Register.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>Register.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\RegisterValidation.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>RegisterValidation.feature.cs</LastGenOutput>
     </None>
     <None Include="Features\SignIn.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>

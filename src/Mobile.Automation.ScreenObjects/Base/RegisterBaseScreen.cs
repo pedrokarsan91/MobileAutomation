@@ -48,9 +48,77 @@ namespace Mobile.Automation.ScreenObjects.Base
             Tap(continueButton);
         }
 
+        public virtual void RegisterInvalidUser(RegisterDetails registerDetails)
+        {
+            if (registerDetails.Email != string.Empty)
+            {
+                EnterText(emailTextBox, MakeEmailUnique(registerDetails.Email));
+                DismissKeyboard();
+            }
+
+            if (registerDetails.Password != string.Empty)
+            {
+                EnterText(passwordTextBox, registerDetails.Password);
+                DismissKeyboard();
+            }
+
+            if (registerDetails.FirstName != string.Empty)
+            {
+                EnterText(firstNameTextBox, registerDetails.FirstName);
+                DismissKeyboard();
+            }
+
+            if (registerDetails.LastName != string.Empty)
+            {
+                EnterText(lastNameTextBox, registerDetails.LastName);
+                DismissKeyboard();
+            }
+
+            ScrollDownTo(genderDropBox);
+
+            if (registerDetails.Gender != string.Empty)
+            {
+                Tap(genderDropBox);
+                Tap(registerDetails.Gender);
+            }
+
+            if (registerDetails.DOB != "EMPTY")
+            {
+                Tap(dateOfBirthDatePicker);
+                Tap(confirmDateOfBirth);
+            }
+
+            if (registerDetails.PostCode != string.Empty)
+            {
+                EnterText(postCodeTextBox, registerDetails.PostCode);
+                DismissKeyboard();
+            }
+
+            ScrollDown();
+            TapRegister();
+        }
+
         public virtual void NavigateToSignIn()
         {
             Tap(SignInLink);
+        }
+
+        public virtual void ScrollDownToRegisterButton()
+        {
+            ScrollDown();
+            ScrollDown();
+
+            var registerQueryResult = AppManager.App.Query(x => x.Text("REGISTER"));
+            var registerQueryResultCount = registerQueryResult.Count();
+
+            for (int index = 0; index < registerQueryResultCount; index++)
+            {
+                if (registerQueryResult[index].Enabled == true && registerQueryResult[index].Label != null)
+                {
+                    Tap(x => x.Text("REGISTER").Index(index));
+                    break;
+                }
+            }
         }
 
         private string MakeEmailUnique(string emailToMakeUnique)
