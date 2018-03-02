@@ -36,6 +36,11 @@ namespace Mobile.Automation.ScreenObjects.Base
             Tap(signInButton);
         }
 
+        public virtual bool IsAt()
+        {
+            return IsElementExist(signInButton);
+        }
+
         #endregion
     }
 }

@@ -8,6 +8,7 @@ namespace Mobile.Automation.ScreenObjects.Base
         #region Elements
 
         protected virtual Func<AppQuery, AppQuery> personalDetails { get; } = x => x.Text("PERSONAL DETAILS");
+        protected virtual Func<AppQuery, AppQuery> signOutButton { get; } = x => x.Text("SIGN OUT");
 
         #endregion
 
@@ -16,6 +17,11 @@ namespace Mobile.Automation.ScreenObjects.Base
         public virtual void IsAt()
         {
             WaitForElement(personalDetails);
+        }
+
+        public virtual void SignOut()
+        {
+            Tap(signOutButton);
         }
 
         #endregion

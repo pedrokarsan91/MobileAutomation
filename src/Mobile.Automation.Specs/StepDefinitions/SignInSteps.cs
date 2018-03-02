@@ -40,6 +40,7 @@ namespace Mobile.Automation.Specs.StepDefinitions
             Screen.HomeScreen.SelectBurgerMenuOption(burgerMenuItem);
         }
 
+        [Given(@"I sign in with the following details")]
         [When(@"I sign in with the following details")]
         public void WhenISignInWithTheFollowingDetails(SignInDetails signInDetails)
         {
@@ -68,6 +69,12 @@ namespace Mobile.Automation.Specs.StepDefinitions
         public void ThenIShouldSeeTheSignInError(string expectedMessage)
         {
             Assert.IsTrue(Screen.SignInScreen.IsElementExist(expectedMessage));
+        }
+
+        [Then(@"I should see the sign in screen")]
+        public void ThenIShouldSeeTheSignInScreen()
+        {
+            Assert.IsTrue(Screen.SignInScreen.IsAt());
         }
     }
 }
