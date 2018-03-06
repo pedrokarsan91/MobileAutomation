@@ -78,5 +78,11 @@ namespace Mobile.Automation.Specs.StepDefinitions
         {
             Assert.IsTrue(Screen.OnboardingScreen.IsSignInLinkExist(), "Timed out waiting for sign in link.");
         }
+
+        [Then(@"I should be on the home screen")]
+        public void ThenIShouldBeOnTheHomeScreen()
+        {
+            Screen.HomeScreen.IsAt();
+        }
     }
 }

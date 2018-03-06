@@ -19,6 +19,7 @@ namespace Mobile.Automation.Specs.StepDefinitions
         }
 
         [Given(@"I skip the registration")]
+        [When(@"I skip the registration")]
         public void GivenISkipTheRegistration()
         {
             Screen.OnboardingScreen.SkipRegistration();

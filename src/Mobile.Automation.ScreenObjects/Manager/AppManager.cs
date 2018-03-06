@@ -24,7 +24,7 @@ namespace Mobile.Automation.ScreenObjects.Manager
                         {
                             _app = ConfigureApp
                                 .Android
-                                .ApkFile("C:/dev/MobileAutomation/src/Mobile.Automation.Specs/bin/Debug/Binaries/UKTV Play.apk")
+                                .ApkFile("../../../Mobile.Automation.Specs/Binaries/UKTV Play.apk")
                                 .StartApp();
                         }
                         else if (Current.Platform == Platform.iOS)

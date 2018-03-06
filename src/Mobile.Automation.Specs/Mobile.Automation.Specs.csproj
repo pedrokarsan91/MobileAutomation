@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Base\FeatureBase.cs" />
+    <Compile Include="FeaturesExtender\BurgerMenuFeature.cs" />
     <Compile Include="FeaturesExtender\OnboardingFeature.cs" />
     <Compile Include="FeaturesExtender\ParentalControlFeature.cs" />
     <Compile Include="FeaturesExtender\RegisterFeature.cs" />
@@ -51,6 +52,11 @@
     <Compile Include="FeaturesExtender\SignInFeature.cs" />
     <Compile Include="FeaturesExtender\SignInValidationFeature.cs" />
     <Compile Include="FeaturesExtender\SignOutFeature.cs" />
+    <Compile Include="Features\BurgerMenu.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BurgerMenu.feature</DependentUpon>
+    </Compile>
     <Compile Include="Features\Onboarding.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -88,6 +94,7 @@
     </Compile>
     <Compile Include="Hooks\BeforeAfterScenario.cs" />
     <Compile Include="Hooks\BeforeAfterTestRun.cs" />
+    <Compile Include="StepDefinitions\BurgerMenuSteps.cs" />
     <Compile Include="StepDefinitions\CommonSteps.cs" />
     <Compile Include="StepDefinitions\OnboardingSteps.cs" />
     <Compile Include="StepDefinitions\ParentalControlSteps.cs" />
@@ -101,6 +108,10 @@
     <None Include="App.config" />
     <None Include="Binaries\UKTV Play.apk">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Features\BurgerMenu.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>BurgerMenu.feature.cs</LastGenOutput>
     </None>
     <None Include="Features\Onboarding.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>

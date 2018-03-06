@@ -56,6 +56,7 @@
     <Compile Include="Base\SignInBaseScreen.cs" />
     <Compile Include="Current.cs" />
     <Compile Include="Manager\AppManager.cs" />
+    <Compile Include="Models\BurgerMenu.cs" />
     <Compile Include="Models\RegisterDetails.cs" />
     <Compile Include="Models\SignInDetails.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

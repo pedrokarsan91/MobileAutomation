@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Mobile.Automation.ScreenObjects.Manager;
+using Mobile.Automation.ScreenObjects.Models;
+using System;
+using System.Collections.Generic;
 using Xamarin.UITest.Queries;
 
 namespace Mobile.Automation.ScreenObjects.Base
@@ -14,10 +17,31 @@ namespace Mobile.Automation.ScreenObjects.Base
 
         #region Methods
 
+        public virtual bool IsAt()
+        {
+            return (IsElementExist(homeTitle) && IsElementExist(boxSets) && IsElementExist(collections));
+        }
+
         public virtual void GoToProfile()
         {
             WaitForHomeScreen();
             Tap(profileIcon);
+        }
+
+        public virtual List<BurgerMenu> GetMenuItems()
+        {
+            var burgerMenu = new BurgerMenu();
+            var actualBurgerMenuItems = AppManager.App.Query(x => x.Class("TiTableView").Class("ListView").Child().Child().Child());
+
+            var actualBurgerMenuItemsList = new List<BurgerMenu>();
+            foreach (var actualBurgerMenuItem in actualBurgerMenuItems)
+            {
+                    burgerMenu.MenuItem = actualBurgerMenuItem.Text;
+                    actualBurgerMenuItemsList.Add(burgerMenu);
+                    burgerMenu = new BurgerMenu();
+            }
+
+            return actualBurgerMenuItemsList;
         }
 
         #endregion

@@ -34,3 +34,7 @@ Scenario: Verify Box Sets Onboarding
 		And the register button
 		And the sign in with Facebook button
 		And the sign in link
+
+Scenario: Skip Registration
+	When I skip the registration
+	Then I should be on the home screen
