@@ -36,9 +36,19 @@ namespace Mobile.Automation.ScreenObjects.Base
             var actualBurgerMenuItemsList = new List<BurgerMenu>();
             foreach (var actualBurgerMenuItem in actualBurgerMenuItems)
             {
+                if (actualBurgerMenuItem.Text != null)
+                {
                     burgerMenu.MenuItem = actualBurgerMenuItem.Text;
                     actualBurgerMenuItemsList.Add(burgerMenu);
                     burgerMenu = new BurgerMenu();
+                }
+            }
+
+            if (IsElementExist("SIGN IN"))
+            {
+                burgerMenu = new BurgerMenu();
+                burgerMenu.MenuItem = "SIGN IN";
+                actualBurgerMenuItemsList.Add(burgerMenu);
             }
 
             return actualBurgerMenuItemsList;
