@@ -11,7 +11,6 @@ namespace Mobile.Automation.ScreenObjects.Base
         #region Elements
 
         protected virtual Func<AppQuery, AppQuery> profileIcon { get; } = x => x.Class("ActionMenuItemView").Index(0);
-        protected virtual Func<AppQuery, AppQuery> searchIcon { get; } = x => x.Class("ActionMenuItemView").Index(1);
 
         #endregion
 
@@ -19,7 +18,7 @@ namespace Mobile.Automation.ScreenObjects.Base
 
         public virtual bool IsAt()
         {
-            return (IsElementExist(homeTitle) && IsElementExist(boxSets) && IsElementExist(collections));
+            return (IsElementExist(homeTitle) && IsElementExist(boxSets));
         }
 
         public virtual void GoToProfile()

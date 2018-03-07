@@ -143,7 +143,9 @@
     </None>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Mobile.Automation.ScreenObjects\Mobile.Automation.ScreenObjects.csproj">
       <Project>{697d8215-e0ed-4c25-a3a6-35d61d93c4ae}</Project>

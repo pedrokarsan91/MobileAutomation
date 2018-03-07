@@ -108,9 +108,8 @@ namespace Mobile.Automation.ScreenObjects.Base
 
         public void WaitForHomeScreen()
         {
-            AppManager.App.WaitForElement(homeTitle);
-            AppManager.App.WaitForElement(boxSets);
-            AppManager.App.WaitForElement(collections);
+            WaitForElement(homeTitle);
+            WaitForElement(boxSets);
         }
 
         public void SelectBurgerMenuOption(string option)

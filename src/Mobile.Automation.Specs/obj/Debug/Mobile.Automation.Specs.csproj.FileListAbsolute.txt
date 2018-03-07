@@ -40,5 +40,6 @@ C:\dev\MobileAutomation\src\Mobile.Automation.Specs\bin\Debug\Mobile.Automation.
 C:\dev\MobileAutomation\src\Mobile.Automation.Specs\bin\Debug\nunit.framework.xml
 C:\dev\MobileAutomation\src\Mobile.Automation.Specs\obj\Debug\Mobile.Automation.Specs.csprojResolveAssemblyReference.cache
 C:\dev\MobileAutomation\src\Mobile.Automation.Specs\obj\Debug\Mobile.Automation.Specs.csproj.CoreCompileInputs.cache
+C:\dev\MobileAutomation\src\Mobile.Automation.Specs\obj\Debug\Mobile.Automation.Specs.csproj.CopyComplete
 C:\dev\MobileAutomation\src\Mobile.Automation.Specs\obj\Debug\Mobile.Automation.Specs.dll
 C:\dev\MobileAutomation\src\Mobile.Automation.Specs\obj\Debug\Mobile.Automation.Specs.pdb

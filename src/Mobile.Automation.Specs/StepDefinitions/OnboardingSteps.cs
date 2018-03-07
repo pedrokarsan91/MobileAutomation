@@ -82,7 +82,7 @@ namespace Mobile.Automation.Specs.StepDefinitions
         [Then(@"I should be on the home screen")]
         public void ThenIShouldBeOnTheHomeScreen()
         {
-            Screen.HomeScreen.IsAt();
+            Assert.IsTrue(Screen.HomeScreen.IsAt());
         }
     }
 }
