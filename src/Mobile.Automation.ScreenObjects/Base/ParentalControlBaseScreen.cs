@@ -48,7 +48,7 @@ namespace Mobile.Automation.ScreenObjects.Base
             ScrollDownTo(emailTextBox);
             EnterText(emailTextBox, "ami.patel@testuktv.co.uk");
             DismissKeyboard();
-            Wait();
+            ScrollDown();
             Tap(enablePinButton);
         }
 
@@ -59,14 +59,15 @@ namespace Mobile.Automation.ScreenObjects.Base
 
         public virtual void Close()
         {
-            var query = AppManager.App.Query(x => x.Id("action_bar").Class("TextView"));
-            var queryCount = query.Count();
+            var q = AppManager.App.Query(x => x.Class("AppCompatTextView"));
+            var qc = q.Count();
 
-            for (int index = 0; index < queryCount; index++)
+            for (int index = 0; index < qc; index++)
             {
-                if (query[index].Text == "PIN")
+                if (q[index].Text == "PIN")
                 {
-                    Tap(x => x.Id("action_bar").Index(index).Class("ActionMenuItemView").Class("ActionMenuItemView"));
+                    Tap(x => x.Id("action_bar").Index(index).Class("ActionMenuItemView"));
+                    break;
                 }
             }
         }

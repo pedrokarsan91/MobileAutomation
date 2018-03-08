@@ -114,15 +114,26 @@ namespace Mobile.Automation.ScreenObjects.Base
 
         public void SelectBurgerMenuOption(string option)
         {
-            var burgerMenuItems = AppManager.App.Query(x => x.Class("ListView").Class("TiTableViewRowProxyItem").Class("TiCompositeLayout").Child());
-            var burgerMenuItemsCount = burgerMenuItems.Count();
-
-            for (int index = 0; index < burgerMenuItemsCount; index++)
+            if (option == "SIGN IN")
             {
-                if (burgerMenuItems[index].Text == option)
+                Tap(option);
+            }
+            else if(option == "MY PROFILE")
+            {
+                Tap(option);
+            }
+            else
+            {
+                var burgerMenuItems = AppManager.App.Query(x => x.Class("TiTableView").Class("TiTableViewRowProxyItem").Child().Child());
+                var burgerMenuItemsCount = burgerMenuItems.Count();
+
+                for (int index = 0; index < burgerMenuItemsCount; index++)
                 {
-                    Tap(x => x.Class("ListView").Class("TiTableViewRowProxyItem").Class("TiCompositeLayout").Child().Index(index));
-                    break;
+                    if (burgerMenuItems[index].Text == option)
+                    {
+                        Tap(x => x.Class("TiTableView").Class("TiTableViewRowProxyItem").Child().Child().Index(index));
+                        break;
+                    }
                 }
             }
         }

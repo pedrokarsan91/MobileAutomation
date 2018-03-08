@@ -29,7 +29,7 @@ C:\dev\Mobile.Automation\src\Mobile.Automation.Specs\obj\Debug\Mobile.Automation
 C:\dev\Mobile.Automation\src\Mobile.Automation.Specs\obj\Debug\Mobile.Automation.Specs.csproj.CoreCompileInputs.cache
 C:\dev\Mobile.Automation\src\Mobile.Automation.Specs\obj\Debug\Mobile.Automation.Specs.dll
 C:\dev\Mobile.Automation\src\Mobile.Automation.Specs\obj\Debug\Mobile.Automation.Specs.pdb
-C:\dev\MobileAutomation\src\Mobile.Automation.Specs\bin\Debug\Binaries\UKTV Play.apk
+C:\dev\MobileAutomation\src\Mobile.Automation.Specs\bin\Debug\Binaries\uktv-test.apk
 C:\dev\MobileAutomation\src\Mobile.Automation.Specs\bin\Debug\Mobile.Automation.Specs.dll.config
 C:\dev\MobileAutomation\src\Mobile.Automation.Specs\bin\Debug\Mobile.Automation.Specs.dll
 C:\dev\MobileAutomation\src\Mobile.Automation.Specs\bin\Debug\Mobile.Automation.Specs.pdb

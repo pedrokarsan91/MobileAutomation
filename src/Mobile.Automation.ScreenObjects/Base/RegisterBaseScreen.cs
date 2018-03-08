@@ -17,7 +17,7 @@ namespace Mobile.Automation.ScreenObjects.Base
         protected virtual Func<AppQuery, AppQuery> genderDropBox { get; } = x => x.Text("Please select your gender");
         protected virtual Func<AppQuery, AppQuery> dateOfBirthDatePicker { get; } = x => x.Text("dd/mm/yyyy");
         protected virtual Func<AppQuery, AppQuery> confirmDateOfBirth { get; } = x => x.Text("Confirm");
-        protected virtual Func<AppQuery, AppQuery> postCodeTextBox { get; } = x => x.Id("titanium_ui_edittext").Index(0);
+        protected virtual Func<AppQuery, AppQuery> postCodeTextBox { get; } = x => x.Id("titanium_ui_edittext").Index(2);
         protected virtual Func<AppQuery, AppQuery> subscriptionCheckBox { get; } = x => x.Id("titanium_ui_checkbox");
         protected virtual Func<AppQuery, AppQuery> continueButton { get; } = x => x.Text("Continue");
         protected virtual Func<AppQuery, AppQuery> SignInLink { get; } = x => x.Id("decor_content_parent").Class("ContentFrameLayout").Class("TiCompositeLayout").Index(4).Child().Text("Sign In");

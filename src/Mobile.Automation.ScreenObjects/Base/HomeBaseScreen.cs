@@ -30,7 +30,7 @@ namespace Mobile.Automation.ScreenObjects.Base
         public virtual List<BurgerMenu> GetMenuItems()
         {
             var burgerMenu = new BurgerMenu();
-            var actualBurgerMenuItems = AppManager.App.Query(x => x.Class("TiTableView").Class("ListView").Child().Child().Child());
+            var actualBurgerMenuItems = AppManager.App.Query(x => x.Class("TiTableView").Class("TiTableViewRowProxyItem").Child().Child());
 
             var actualBurgerMenuItemsList = new List<BurgerMenu>();
             foreach (var actualBurgerMenuItem in actualBurgerMenuItems)
