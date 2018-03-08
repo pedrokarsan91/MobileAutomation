@@ -106,7 +106,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="Binaries\uktv-test.apk">
+    <None Include="Binaries\UKTV Play.apk">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="Features\BurgerMenu.feature">
