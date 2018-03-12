@@ -152,5 +152,20 @@ namespace Mobile.Automation.ScreenObjects
                 }
             }
         }
+
+        public static GeoLocationBaseScreen GeoLocationScreen
+        {
+            get
+            {
+                if (Current.Platform == Platform.Android)
+                {
+                    return GetScreen<AndroidGeoLocationBaseScreen>();
+                }
+                else
+                {
+                    return GetScreen<AppleiOSGeoLocationBaseScreen>();
+                }
+            }
+        }
     }
 }

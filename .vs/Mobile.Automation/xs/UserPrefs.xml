@@ -1,0 +1,47 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workbench ActiveDocument="src/Mobile.Automation.ScreenObjects/Manager/AppManager.cs">
+    <Files>
+      <File FileName="src/Mobile.Automation.ScreenObjects/Manager/AppManager.cs" Line="30" Column="67" />
+    </Files>
+    <Pads>
+      <Pad Id="MonoDevelop.UnitTesting.TestPad">
+        <State name="__root__">
+          <Node name="Mobile.Automation" expanded="True">
+            <Node name="Mobile.Automation.Specs" expanded="True">
+              <Node name="Mobile" expanded="True">
+                <Node name="Features" expanded="True">
+                  <Node name="BurgerMenuFeature" expanded="True" />
+                  <Node name="OnboardingFeature" expanded="True" />
+                  <Node name="ParentalControlFeature" expanded="True">
+                    <Node name="ParentalControlFeature(Android)" expanded="True">
+                      <Node name="SetUpPin" expanded="True" />
+                    </Node>
+                  </Node>
+                  <Node name="RegisterFeature" expanded="True">
+                    <Node name="RegisterFeature(Android)" expanded="True">
+                      <Node name="RegisterFromBurgerMenu" selected="True" />
+                    </Node>
+                  </Node>
+                  <Node name="RegisterValidationFeature" expanded="True" />
+                  <Node name="SignInFeature" expanded="True">
+                    <Node name="SignInFeature(Android)" expanded="True" />
+                  </Node>
+                  <Node name="SignInValidationFeature" expanded="True" />
+                  <Node name="SignOutFeature" expanded="True">
+                    <Node name="SignOutFeature(Android)" expanded="True" />
+                  </Node>
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+</Properties>

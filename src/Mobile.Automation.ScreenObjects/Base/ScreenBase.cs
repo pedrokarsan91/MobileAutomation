@@ -21,6 +21,12 @@ namespace Mobile.Automation.ScreenObjects.Base
 
         #region Common Methods
 
+        public AppResult[] Query (Func<AppQuery, AppQuery> element)
+        {
+            Wait();
+            return AppManager.App.Query(element);
+        }
+
         public bool IsElementExist(Func<AppQuery, AppQuery> element)
         {
             try

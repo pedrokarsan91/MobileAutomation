@@ -106,9 +106,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="Binaries\UKTV Play.apk">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
     <None Include="Features\BurgerMenu.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>BurgerMenu.feature.cs</LastGenOutput>
@@ -142,6 +139,9 @@
       <LastGenOutput>SignOut.feature.cs</LastGenOutput>
     </None>
     <None Include="packages.config" />
+    <None Include="Binaries\UKTV Play.apk">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
@@ -151,6 +151,9 @@
       <Project>{697d8215-e0ed-4c25-a3a6-35d61d93c4ae}</Project>
       <Name>Mobile.Automation.ScreenObjects</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Binaries\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
